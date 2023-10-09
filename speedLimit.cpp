@@ -16,7 +16,6 @@ int main() {
       segmentPace[i] = speeds;
     }
   }
-  // std::cout << "\n";
   for (int i = 0; i < cowSegments; i++) {
     int segments, cows;
     scanf("%d %d", &segments, &cows);
@@ -24,7 +23,6 @@ int main() {
       cowPace[i] = cows;
     }
   }
-  // std::cout << "\n";
   int maxDiff = 0;
   for (int i = 0; i < 100; i++) {
     int diff = cowPace[i] - segmentPace[i];
@@ -32,7 +30,6 @@ int main() {
     if (diff > maxDiff)
       maxDiff = diff;
   }
-  std::cout << maxDiff;
   std::freopen("speeding.out", "w", stdout);
   printf("%d", maxDiff);
 }
