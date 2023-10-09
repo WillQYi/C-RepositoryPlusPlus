@@ -5,19 +5,19 @@ int main() {
   std::freopen("speeding.in", "r", stdin);
   int numberSegments, cowSegments;
   scanf("%d %d", &numberSegments, &cowSegments);
-  std::vector<int> segmentPace(100, 0), cowPace(100, 0);
+  std::vector<int> segmentPace, cowPace;
   for (int i = 0; i < numberSegments; i++) {
     int segments, speeds;
     scanf("%d %d", &segments, &speeds);
     for (int i = 0; i < segments; i++) {
-      segmentPace[i] = speeds;
+      segmentPace.push_back(speeds);
     }
   }
   for (int i = 0; i < cowSegments; i++) {
     int segments, cows;
     scanf("%d %d", &segments, &cows);
     for (int i = 0; i < segments; i++) {
-      cowPace[i] = cows;
+      cowPace.push_back(cows);
     }
   }
   int maxDiff = 0;
