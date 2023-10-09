@@ -1,14 +1,11 @@
 #include <cstdio>
 #include <iostream>
 #include <vector>
-// absolute crap solution, made this late at night and was really tired, no
-// excuses though, bad solution, bad time complexity, lots of unnecessary
-// calculations.
 int main() {
   std::freopen("speeding.in", "r", stdin);
   int numberSegments, cowSegments;
   scanf("%d %d", &numberSegments, &cowSegments);
-  std::vector<int> segmentPace(100), cowPace(100);
+  std::vector<int> segmentPace(100, 0), cowPace(100, 0);
   for (int i = 0; i < numberSegments; i++) {
     int segments, speeds;
     scanf("%d %d", &segments, &speeds);
