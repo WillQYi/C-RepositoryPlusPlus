@@ -1,6 +1,7 @@
 #include <cstdio>
 #include <iostream>
 #include <vector>
+
 int main() {
   std::freopen("speeding.in", "r", stdin);
   int numberSegments, cowSegments;
@@ -11,19 +12,23 @@ int main() {
     scanf("%d %d", &segments, &speeds);
     for (int i = 0; i < segments; i++) {
       segmentPace.push_back(speeds);
+      std::cout << segmentPace[i] << " ";
     }
   }
+  std::cout << "\n" << "\n";
   for (int i = 0; i < cowSegments; i++) {
     int segments, cows;
     scanf("%d %d", &segments, &cows);
     for (int i = 0; i < segments; i++) {
       cowPace.push_back(cows);
+      std::cout << cowPace[i] << " ";
     }
   }
+  std::cout << "\n";
   int maxDiff = 0;
   for (int i = 0; i < 100; i++) {
     int diff = cowPace[i] - segmentPace[i];
-    // std::cout << diff << " " << maxDiff << "\n";
+    std::cout << cowPace[i] << " " << segmentPace[i] << " "<< diff << " " << maxDiff << "\n";
     if (diff > maxDiff)
       maxDiff = diff;
   }
